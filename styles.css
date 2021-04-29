@@ -1,6 +1,8 @@
-/* body {
-  background: orange;
-}*/
+body {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
 div.column {
   border: 1px solid black;
   height: 30px;
