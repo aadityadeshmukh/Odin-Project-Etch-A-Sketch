@@ -16,3 +16,17 @@ for (i = 0; i < 16; i++) {
   }
   baseDiv.append(rowDiv);
 }
+innerDivs = document.querySelectorAll(".column");
+innerDivs.forEach(iDiv => {
+  iDiv.addEventListener("mouseover", function(e) {
+    console.log(e.target);
+    e.target.style.backgroundColor = "brown";
+  });
+});
+
+innerDivs.forEach(iDiv => {
+  iDiv.addEventListener("mouseout", function(e) {
+    console.log(e.target);
+    e.target.style.backgroundColor = "";
+  });
+});

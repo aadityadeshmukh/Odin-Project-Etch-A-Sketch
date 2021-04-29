@@ -3,19 +3,15 @@
 }*/
 div.column {
   border: 1px solid black;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   display: inline-block;
   margin: 10px;
-}
-div.column {
-  background-color: brown;
 }
 #container {
   border: 1px solid black;
   width: fit-content;
 }
 div.row {
-  border: 1px solid red;
   margin: 5px;
 }
