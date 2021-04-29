@@ -13,6 +13,7 @@ div.column {
 }
 #container {
   border: 1px solid black;
+  width: fit-content;
 }
 div.row {
   border: 1px solid red;
