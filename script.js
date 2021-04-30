@@ -1,3 +1,5 @@
+//button to clear current deck
+
 //Adding a 16x16 square grid
 //Create a base div
 baseDiv = document.createElement("div");
