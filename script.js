@@ -30,5 +30,6 @@ innerDivs.forEach(iDiv => {
   iDiv.addEventListener("mouseout", function(e) {
     console.log(e.target);
     e.target.style.backgroundColor = "";
+    e.target.style.transition = "background-color 1.5s";
   });
 });
