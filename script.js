@@ -23,15 +23,20 @@ for (i = 0; i < 16; i++) {
 innerDivs = document.querySelectorAll(".column");
 innerDivs.forEach(iDiv => {
   iDiv.addEventListener("mouseover", function(e) {
-    console.log(e.target);
     e.target.style.backgroundColor = "brown";
   });
 });
 
 innerDivs.forEach(iDiv => {
   iDiv.addEventListener("mouseout", function(e) {
-    console.log(e.target);
     e.target.style.backgroundColor = "";
     e.target.style.transition = "background-color 1.5s";
   });
 });
+clearbtn.onclick = () => {
+  innerDivs.forEach(iDiv => {
+    iDiv.remove();
+    baseDiv.style.borderStyle = "none";
+    console.log("remove div");
+  });
+};
