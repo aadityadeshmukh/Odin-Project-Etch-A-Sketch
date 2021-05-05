@@ -1,5 +1,7 @@
 //button to clear current deck
-
+clearbtn = document.createElement("button");
+clearbtn.textContent = "Clear Deck";
+document.body.appendChild(clearbtn);
 //Adding a 16x16 square grid
 //Create a base div
 baseDiv = document.createElement("div");
