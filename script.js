@@ -10,12 +10,12 @@ document.body.append(baseDiv);
 //run a loop for creating a 16x16 matrix
 createDeck(16);
 
-// innerDivs.forEach(iDiv => {
-//   iDiv.addEventListener("mouseout", function(e) {
-//     e.target.style.backgroundColor = "";
-//     e.target.style.transition = "background-color 1.5s";
-//   });
-// });
+innerDivs.forEach(iDiv => {
+  iDiv.addEventListener("mouseout", function(e) {
+    e.target.style.backgroundColor = "";
+    e.target.style.transition = "background-color 1.5s";
+  });
+});
 clearbtn.onclick = () => {
   innerDivs.forEach(iDiv => {
     iDiv.remove();
