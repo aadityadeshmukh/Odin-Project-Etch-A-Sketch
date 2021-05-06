@@ -48,3 +48,7 @@ function createDeck(dim) {
     });
   });
 }
+function getRandomColor() {
+  let randomNum = Math.random();
+  return colorCode;
+}
