@@ -1,3 +1,7 @@
-# web-platform-vejkiu
+# Etch a Sketch
+## A project from the curriculum of [theodinproject.com]
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-vejkiu)
+Learning outcomes:
+- [X] Creating HTML elements in js
+- [X] Using loops to efficiently create html elements
+- [X] styling html elements in js
