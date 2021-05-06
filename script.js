@@ -44,11 +44,14 @@ function createDeck(dim) {
   innerDivs = document.querySelectorAll(".column");
   innerDivs.forEach(iDiv => {
     iDiv.addEventListener("mouseover", function(e) {
-      e.target.style.backgroundColor = "brown";
+      let rVal = getRandomColor();
+      let gVal = getRandomColor();
+      let bVal = getRandomColor();
+      e.target.style.backgroundColor = `rgb(${rVal}, ${gVal}, ${bVal})`;
     });
   });
 }
 function getRandomColor() {
-  let randomNum = Math.random();
-  return colorCode;
+  let randomNum = Math.floor(Math.random() * (255 + 1));
+  return randomNum;
 }
