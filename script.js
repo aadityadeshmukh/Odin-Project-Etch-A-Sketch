@@ -8,35 +8,43 @@ baseDiv = document.createElement("div");
 baseDiv.setAttribute("id", "container");
 document.body.append(baseDiv);
 //run a loop for creating a 16x16 matrix
-for (i = 0; i < 16; i++) {
-  rowDiv = document.createElement("div");
-  rowDiv.setAttribute("id", `row${i + 1}`);
-  rowDiv.setAttribute("class", "row");
-  for (j = 0; j < 16; j++) {
-    divElem = document.createElement("div");
-    divElem.setAttribute("id", `${j + 1}`);
-    divElem.setAttribute("class", "column");
-    rowDiv.append(divElem);
-  }
-  baseDiv.append(rowDiv);
-}
-innerDivs = document.querySelectorAll(".column");
-innerDivs.forEach(iDiv => {
-  iDiv.addEventListener("mouseover", function(e) {
-    e.target.style.backgroundColor = "brown";
-  });
-});
+createDeck(16);
 
-innerDivs.forEach(iDiv => {
-  iDiv.addEventListener("mouseout", function(e) {
-    e.target.style.backgroundColor = "";
-    e.target.style.transition = "background-color 1.5s";
-  });
-});
+// innerDivs.forEach(iDiv => {
+//   iDiv.addEventListener("mouseout", function(e) {
+//     e.target.style.backgroundColor = "";
+//     e.target.style.transition = "background-color 1.5s";
+//   });
+// });
 clearbtn.onclick = () => {
   innerDivs.forEach(iDiv => {
     iDiv.remove();
     baseDiv.style.borderStyle = "none";
     console.log("remove div");
   });
+  let inpDim = prompt("Enter dimensions of your deck:");
+  createDeck(inpDim);
 };
+
+function createDeck(dim) {
+  //run a loop for creating a dimxdim matrix
+  for (i = 0; i < dim; i++) {
+    rowDiv = document.createElement("div");
+    rowDiv.setAttribute("id", `row${i + 1}`);
+    rowDiv.setAttribute("class", "row");
+    for (j = 0; j < dim; j++) {
+      divElem = document.createElement("div");
+      divElem.setAttribute("id", `${j + 1}`);
+      divElem.setAttribute("class", "column");
+      rowDiv.append(divElem);
+    }
+    baseDiv.append(rowDiv);
+  }
+
+  innerDivs = document.querySelectorAll(".column");
+  innerDivs.forEach(iDiv => {
+    iDiv.addEventListener("mouseover", function(e) {
+      e.target.style.backgroundColor = "brown";
+    });
+  });
+}
